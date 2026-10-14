@@ -320,6 +320,7 @@ git push -u origin main
 | Symptom | Likely cause | Fix |
 |---|---|---|
 | Build fails installing dependencies | Dependency pin conflicts with Streamlit Cloud's Python version | Loosen the pins in `requirements.txt` (e.g. `tensorflow-cpu>=2.17,<3`) and redeploy |
+| `No solution found... tensorflow-cpu==2.21.0 has no wheels with a matching Python ABI tag` | Streamlit Cloud defaulted to a Python version newer than any TensorFlow wheel supports (observed: Python 3.14, while `tensorflow-cpu` 2.21.0 only ships wheels up to Python 3.13) | This repo pins the runtime via `.python-version` (and `runtime.txt` as a fallback) to **3.12**. If it still picks the wrong version, open **Manage app → Settings → General** and set the Python version explicitly to 3.12, then reboot the app. |
 | App crashes / restarts after upload | Out-of-memory on the free tier | Confirm you deployed with **MobileNetV2**, not ResNet50 — this is exactly the failure mode measured in §3.1/§3.3 |
 | "Model file not found" error | `Models/mobilenetv2_best_validation.keras` wasn't pushed (check `.gitignore`/LFS filters) or path mismatch between repo root and "Main file path" | Verify the file is present in the GitHub repo UI, and that the main file path matches the folder structure |
 | Image upload does nothing | Browser-side issue or file type not in the allowed list | Confirm the file is `.jpg/.jpeg/.png/.bmp` and under 10 MB |
