@@ -1,0 +1,43 @@
+{
+  "model": "resnet50",
+  "selected_stage": "fine_tuned",
+  "selected_checkpoint_stage": "resnet50_fine_tuned_best.keras",
+  "selection_rule": "lowest validation loss between frozen-head and fine-tuned checkpoints",
+  "validation_loss": 0.218806654214859,
+  "validation_accuracy": 0.9422310590744019,
+  "validation_macro_f1": 0.939284795274894,
+  "preprocessing": "ResNet50 preprocess_input; RGB to BGR and ImageNet channel centering.",
+  "class_names_in_output_order": [
+    "Glioma",
+    "Meningioma",
+    "No Tumor",
+    "Pituitary"
+  ],
+  "model_path": "/content/drive/MyDrive/Brain MRI Tumor Classification/Models/resnet50_best_validation.keras",
+  "per_class_report": {
+    "Glioma": {
+      "precision": 0.9935483870967742,
+      "recall": 0.9565217391304348,
+      "f1-score": 0.9746835443037974,
+      "support": 161.0
+    },
+    "Meningioma": {
+      "precision": 0.9224137931034483,
+      "recall": 0.8629032258064516,
+      "f1-score": 0.8916666666666667,
+      "support": 124.0
+    },
+    "No Tumor": {
+      "precision": 0.9215686274509803,
+      "recall": 0.9494949494949495,
+      "f1-score": 0.9353233830845771,
+      "support": 99.0
+    },
+    "Pituitary": {
+      "precision": 0.9147286821705426,
+      "recall": 1.0,
+      "f1-score": 0.9554655870445344,
+      "support": 118.0
+    }
+  }
+}

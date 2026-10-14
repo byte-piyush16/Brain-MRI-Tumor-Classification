@@ -1,0 +1,43 @@
+{
+  "model": "efficientnetb0",
+  "selected_stage": "fine_tuned",
+  "selected_checkpoint_stage": "efficientnetb0_fine_tuned_best.keras",
+  "selection_rule": "lowest validation loss between frozen-head and fine-tuned checkpoints",
+  "validation_loss": 0.41970697045326233,
+  "validation_accuracy": 0.8386453986167908,
+  "validation_macro_f1": 0.8313525186520718,
+  "preprocessing": "Pass float RGB pixels [0, 255]; EfficientNetB0 includes preprocessing.",
+  "class_names_in_output_order": [
+    "Glioma",
+    "Meningioma",
+    "No Tumor",
+    "Pituitary"
+  ],
+  "model_path": "/content/drive/MyDrive/Brain MRI Tumor Classification/Models/efficientnetb0_best_validation.keras",
+  "per_class_report": {
+    "Glioma": {
+      "precision": 0.9657534246575342,
+      "recall": 0.8757763975155279,
+      "f1-score": 0.9185667752442996,
+      "support": 161.0
+    },
+    "Meningioma": {
+      "precision": 0.7864077669902912,
+      "recall": 0.6532258064516129,
+      "f1-score": 0.7136563876651982,
+      "support": 124.0
+    },
+    "No Tumor": {
+      "precision": 0.8631578947368421,
+      "recall": 0.8282828282828283,
+      "f1-score": 0.845360824742268,
+      "support": 99.0
+    },
+    "Pituitary": {
+      "precision": 0.740506329113924,
+      "recall": 0.9915254237288136,
+      "f1-score": 0.8478260869565217,
+      "support": 118.0
+    }
+  }
+}

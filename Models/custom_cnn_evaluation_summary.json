@@ -1,0 +1,26 @@
+{
+  "model": "custom_cnn",
+  "selected_training_run": "continued",
+  "selection_rule": "lowest validation loss",
+  "selected_checkpoint": "custom_cnn_continued_best_validation.keras",
+  "image_size": [
+    224,
+    224
+  ],
+  "batch_size": 32,
+  "initial_epochs_requested": 20,
+  "continued_training_epochs_requested": 8,
+  "seed": 42,
+  "class_names_in_output_order": [
+    "Glioma",
+    "Meningioma",
+    "No Tumor",
+    "Pituitary"
+  ],
+  "validation_loss": 0.719167172908783,
+  "validation_accuracy": 0.7310757040977478,
+  "validation_macro_f1": 0.717148845527037,
+  "test_loss": 0.7516889572143555,
+  "test_accuracy": 0.6626016497612,
+  "test_macro_f1": 0.6464844671998089
+}

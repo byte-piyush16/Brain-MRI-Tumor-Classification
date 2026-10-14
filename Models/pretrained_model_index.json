@@ -1,0 +1,39 @@
+{
+  "class_names_in_output_order": [
+    "Glioma",
+    "Meningioma",
+    "No Tumor",
+    "Pituitary"
+  ],
+  "image_size": [
+    224,
+    224
+  ],
+  "models": {
+    "mobilenetv2": {
+      "model_path": "/content/drive/MyDrive/Brain MRI Tumor Classification/Models/mobilenetv2_best_validation.keras",
+      "preprocessing": "MobileNetV2 preprocess_input; scales RGB pixels to [-1, 1].",
+      "selected_stage": "fine_tuned",
+      "validation_loss": 0.3591465950012207,
+      "validation_accuracy": 0.886454164981842,
+      "validation_macro_f1": 0.8817002845584855
+    },
+    "efficientnetb0": {
+      "model_path": "/content/drive/MyDrive/Brain MRI Tumor Classification/Models/efficientnetb0_best_validation.keras",
+      "preprocessing": "Pass float RGB pixels [0, 255]; EfficientNetB0 includes preprocessing.",
+      "selected_stage": "fine_tuned",
+      "validation_loss": 0.41970697045326233,
+      "validation_accuracy": 0.8386453986167908,
+      "validation_macro_f1": 0.8313525186520718
+    },
+    "resnet50": {
+      "model_path": "/content/drive/MyDrive/Brain MRI Tumor Classification/Models/resnet50_best_validation.keras",
+      "preprocessing": "ResNet50 preprocess_input; RGB to BGR and ImageNet channel centering.",
+      "selected_stage": "fine_tuned",
+      "validation_loss": 0.218806654214859,
+      "validation_accuracy": 0.9422310590744019,
+      "validation_macro_f1": 0.939284795274894
+    }
+  },
+  "test_split_used": false
+}

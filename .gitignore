@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+
+# Streamlit
+.streamlit/secrets.toml
+
+# ResNet50's saved model exceeds GitHub's 100 MB per-file limit for a normal
+# push, and the deployed app (MobileNetV2) does not need it. Kept on local
+# disk only — see README.md Section 3/7 for the full reasoning and how to
+# track it with Git LFS instead if you ever want it versioned on GitHub.
+Models/resnet50_best_validation.keras

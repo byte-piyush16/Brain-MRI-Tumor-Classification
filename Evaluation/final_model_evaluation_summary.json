@@ -1,0 +1,65 @@
+{
+  "project": "Brain MRI Tumor Classification",
+  "test_split_rows": 246,
+  "class_names_in_output_order": [
+    "Glioma",
+    "Meningioma",
+    "No Tumor",
+    "Pituitary"
+  ],
+  "image_size": [
+    224,
+    224
+  ],
+  "test_split_used_for_training_or_tuning_in_this_notebook": false,
+  "custom_cnn_test_was_already_evaluated_in_notebook_2": true,
+  "model_selection_rule": "Use validation accuracy within 5 percentage points of the best; among those under the 500 MB model-artifact target, prefer smaller size. Test metrics are reported but not used for selection.",
+  "models": [
+    {
+      "model": "ResNet50",
+      "test_accuracy": 0.9349593495934959,
+      "test_macro_precision": 0.9344563166796773,
+      "test_macro_recall": 0.92828089569161,
+      "test_macro_f1": 0.9291545561925997,
+      "test_weighted_f1": 0.9344182505370204,
+      "model_size_mb": 204.79602527618408,
+      "model_path": "/content/drive/MyDrive/Brain MRI Tumor Classification/Models/resnet50_best_validation.keras"
+    },
+    {
+      "model": "MobileNetV2",
+      "test_accuracy": 0.8699186991869918,
+      "test_macro_precision": 0.8754502600310002,
+      "test_macro_recall": 0.8698483560090703,
+      "test_macro_f1": 0.8664199417655664,
+      "test_weighted_f1": 0.8690748992473626,
+      "model_size_mb": 20.76095199584961,
+      "model_path": "/content/drive/MyDrive/Brain MRI Tumor Classification/Models/mobilenetv2_best_validation.keras"
+    },
+    {
+      "model": "EfficientNetB0",
+      "test_accuracy": 0.8333333333333334,
+      "test_macro_precision": 0.8430196594462064,
+      "test_macro_recall": 0.8389030612244898,
+      "test_macro_f1": 0.8340153327100146,
+      "test_weighted_f1": 0.8328345320927294,
+      "model_size_mb": 33.772786140441895,
+      "model_path": "/content/drive/MyDrive/Brain MRI Tumor Classification/Models/efficientnetb0_best_validation.keras"
+    },
+    {
+      "model": "Custom CNN",
+      "test_accuracy": 0.6626016260162602,
+      "test_macro_precision": 0.7226799242424242,
+      "test_macro_recall": 0.671329365079365,
+      "test_macro_f1": 0.6464844671998089,
+      "test_weighted_f1": 0.654097058616591,
+      "model_size_mb": 1.3539485931396484,
+      "model_path": "/content/drive/MyDrive/Brain MRI Tumor Classification/Models/brain_mri_custom_cnn_final.keras"
+    }
+  ],
+  "outputs": {
+    "test_comparison_csv": "/content/drive/MyDrive/Brain MRI Tumor Classification/Evaluation/test_model_comparison.csv",
+    "per_class_metrics_csv": "/content/drive/MyDrive/Brain MRI Tumor Classification/Evaluation/test_per_class_metrics.csv",
+    "validation_test_size_comparison_csv": "/content/drive/MyDrive/Brain MRI Tumor Classification/Evaluation/validation_test_size_comparison.csv",
+    "confusion_matrix_directory": "/content/drive/MyDrive/Brain MRI Tumor Classification/Evaluation"
+  }
+}
